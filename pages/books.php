@@ -9,7 +9,7 @@
         $libreria = new DBAdministrarBiblioteca();
         $libros = $libreria->getbooks();
         foreach($libros as $registroTitulos){
-            print('<p>'.$registroTitulos['titulo'].'</p>');
+            print('<p>' . ' |||| ' . $registroTitulos['titulo'].'</p>');
         }
     ?>
 </div>

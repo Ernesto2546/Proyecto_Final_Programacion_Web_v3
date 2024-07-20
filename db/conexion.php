@@ -29,6 +29,23 @@ class DBAdministrarBiblioteca {
 
             
         }
+        public function getAuthors(){
+            $pdoConexion = $this->getConexion();
+
+
+            if ( is_object($pdoConexion)){
+                $sql = "SELECT * FROM autores";
+                $authors = $pdoConexion->query($sql);
+                return $authors; 
+                
+            }else {
+                header('location: BIBLIOTECA-MAIN/401.php');
+            }
+
+            
+        }
+
+        
         public function getContacts(){
             $pdoConexion = $this->getConexion();
 
