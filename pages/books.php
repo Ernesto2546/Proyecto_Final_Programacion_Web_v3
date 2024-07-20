@@ -8,8 +8,8 @@
     <?php 
         $libreria = new DBAdministrarBiblioteca();
         $libros = $libreria->getbooks();
-        foreach($libros as $registro){
-            print('<p>'.$registro['titulo'].'</p>');
+        foreach($libros as $registroTitulos){
+            print('<p>'.$registroTitulos['titulo'].'</p>');
         }
     ?>
 </div>

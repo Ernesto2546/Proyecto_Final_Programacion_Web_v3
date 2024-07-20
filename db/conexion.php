@@ -20,8 +20,23 @@ class DBAdministrarBiblioteca {
 
             if ( is_object($pdoConexion)){
                 $sql = "SELECT * FROM titulos";
-                $resultado = $pdoConexion->query($sql);
-                return $resultado; 
+                $titles = $pdoConexion->query($sql);
+                return $titles; 
+                
+            }else {
+                header('location: BIBLIOTECA-MAIN/401.php');
+            }
+
+            
+        }
+        public function getContacts(){
+            $pdoConexion = $this->getConexion();
+
+
+            if ( is_object($pdoConexion)){
+                $sql = "SELECT * FROM tiendas";
+                $shops = $pdoConexion->query($sql);
+                return $shops; 
                 
             }else {
                 header('location: BIBLIOTECA-MAIN/401.php');
