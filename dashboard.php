@@ -2,7 +2,7 @@
 <?php include("template/sidebar.php") ?>
 
 <main>
-    <?php include("pages/books.php") ?>
+    <?php include("pages/dashboard.php") ?>
 </main>
 
 <?php include("template/footer.php") ?>
