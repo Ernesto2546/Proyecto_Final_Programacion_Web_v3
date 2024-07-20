@@ -46,20 +46,24 @@ class DBAdministrarBiblioteca {
         }
 
         
-        public function getContacts(){
+        public function setContacts($email, $nombre, $asunto, $comentario){
             $pdoConexion = $this->getConexion();
-
+            $correcto = false;
 
             if ( is_object($pdoConexion)){
-                $sql = "SELECT * FROM tiendas";
-                $shops = $pdoConexion->query($sql);
-                return $shops; 
+
+                $fecha = date("Y/m/d");
+                $sql = "INSERT INTO contacto (fecha, correo, nombre, asunto, comentario) VALUES (?,?,?,?,?)";
+                $stmt= $pdoConexion->prepare($sql);
+                $stmt->execute([$fecha, $email, $nombre, $asunto, $comentario]);
+
+                $correcto = true;
                 
             }else {
                 header('location: BIBLIOTECA-MAIN/401.php');
             }
 
-            
+            return $correcto;
         }
 
 }

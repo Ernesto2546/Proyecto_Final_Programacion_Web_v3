@@ -1,0 +1,28 @@
+.campos {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#contenedorContactos {
+    display: flex;
+}
+
+#contenedorContactos > div {
+    width: 45%;
+    margin-right: 30px;
+}
+
+#contenedorContactos > #img {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+
+    /* background-color: rgba(156, 156, 156, 0.151); */
+
+    border-right: 3px solid gray;
+}
+
+
+
+
+
