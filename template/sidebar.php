@@ -16,6 +16,10 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Autores
                     </a>
+                    <a class="nav-link" href="contacts.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        Contactos
+                    </a>
 
             </div>
             <div class="sb-sidenav-footer">
